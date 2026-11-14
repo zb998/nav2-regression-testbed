@@ -1,0 +1,10 @@
+name: lidar_drop
+description: Robustness - 50% of /scan messages dropped.
+sut: mock
+start: {x: 0.0, y: 0.0, yaw: 0.0}
+goal: {x: 2.0, y: 0.0, yaw: 0.0}
+timeout_s: 40
+arrival_tolerance_m: 0.25
+faults:
+  - {kind: drop, topic: /scan, rate: 0.5}
+thresholds: {budget_s: 40.0}

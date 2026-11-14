@@ -1,0 +1,39 @@
+{
+  "scenario": {
+    "name": "simple_line",
+    "description": "Baseline straight-line navigation, no faults.",
+    "sut": "mock",
+    "start": {
+      "x": 0.0,
+      "y": 0.0,
+      "yaw": 0.0
+    },
+    "goal": {
+      "x": 2.0,
+      "y": 0.0,
+      "yaw": 0.0
+    },
+    "timeout_s": 30,
+    "arrival_tolerance_m": 0.2,
+    "faults": [],
+    "thresholds": {
+      "min_scan_hz": 8.0,
+      "budget_s": 30.0
+    }
+  },
+  "results": [
+    {
+      "name": "arrival",
+      "passed": true,
+      "quality_property": "functional-correctness",
+      "detail": "final_error=0.098m (tolerance 0.2m)"
+    },
+    {
+      "name": "time-budget",
+      "passed": true,
+      "quality_property": "performance",
+      "detail": "elapsed=6.72s (budget 30.0s)"
+    }
+  ],
+  "metrics": null
+}

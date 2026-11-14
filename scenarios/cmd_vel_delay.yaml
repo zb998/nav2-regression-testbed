@@ -1,0 +1,10 @@
+name: cmd_vel_delay
+description: Robustness - /cmd_vel delayed 0.3s.
+sut: mock
+start: {x: 0.0, y: 0.0, yaw: 0.0}
+goal: {x: 2.0, y: 0.0, yaw: 0.0}
+timeout_s: 40
+arrival_tolerance_m: 0.25
+faults:
+  - {kind: delay, topic: /cmd_vel, delay_s: 0.3}
+thresholds: {budget_s: 40.0}

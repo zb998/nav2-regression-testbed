@@ -1,0 +1,10 @@
+name: lidar_noise
+description: Robustness - Gaussian noise on /scan triggers avoidance.
+sut: mock
+start: {x: 0.0, y: 0.0, yaw: 0.0}
+goal: {x: 2.0, y: 0.0, yaw: 0.0}
+timeout_s: 40
+arrival_tolerance_m: 0.25
+faults:
+  - {kind: noise, topic: /scan, noise_std: 3.0}
+thresholds: {budget_s: 40.0}

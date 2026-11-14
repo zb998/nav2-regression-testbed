@@ -1,0 +1,11 @@
+name: simple_line
+description: Baseline straight-line navigation, no faults.
+sut: mock
+start: {x: 0.0, y: 0.0, yaw: 0.0}
+goal: {x: 2.0, y: 0.0, yaw: 0.0}
+timeout_s: 60
+arrival_tolerance_m: 0.2
+faults: []
+thresholds:
+  min_scan_hz: 7.0
+  budget_s: 30.0

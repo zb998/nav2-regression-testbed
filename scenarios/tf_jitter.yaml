@@ -1,0 +1,10 @@
+name: tf_jitter
+description: Robustness - jitter on the odom->base_link transform.
+sut: mock
+start: {x: 0.0, y: 0.0, yaw: 0.0}
+goal: {x: 2.0, y: 0.0, yaw: 0.0}
+timeout_s: 40
+arrival_tolerance_m: 0.25
+faults:
+  - {kind: tf_jitter, topic: /tf, rate: 0.05}
+thresholds: {budget_s: 40.0}

@@ -1,0 +1,5 @@
+min_scan_hz: 8.0
+budget_s: 60.0
+arrival_tolerance_m: 0.2
+max_cpu_pct: 80.0
+max_mem_pct: 70.0

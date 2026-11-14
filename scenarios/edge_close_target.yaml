@@ -1,0 +1,9 @@
+name: edge_close_target
+description: Boundary - a very close goal; must complete without overshoot hang.
+sut: mock
+start: {x: 0.0, y: 0.0, yaw: 0.0}
+goal: {x: 0.35, y: 0.0, yaw: 0.0}
+timeout_s: 40
+arrival_tolerance_m: 0.15
+faults: []
+thresholds: {budget_s: 20.0}

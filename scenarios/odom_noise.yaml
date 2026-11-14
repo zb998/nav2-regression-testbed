@@ -1,0 +1,10 @@
+name: odom_noise
+description: Robustness - Gaussian noise on /odom pose.
+sut: mock
+start: {x: 0.0, y: 0.0, yaw: 0.0}
+goal: {x: 2.0, y: 0.0, yaw: 0.0}
+timeout_s: 40
+arrival_tolerance_m: 0.3
+faults:
+  - {kind: noise, topic: /odom, noise_std: 0.2}
+thresholds: {budget_s: 40.0}

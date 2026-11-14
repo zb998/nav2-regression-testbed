@@ -1,0 +1,9 @@
+name: corner_turn
+description: Multi-segment navigation (corner / doorway).
+sut: mock
+start: {x: 0.0, y: 0.0, yaw: 0.0}
+goal: {x: 1.5, y: 1.5, yaw: 0.0}
+timeout_s: 60
+arrival_tolerance_m: 0.2
+faults: []
+thresholds: {budget_s: 30.0}
